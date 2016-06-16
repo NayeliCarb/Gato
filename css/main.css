@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
+* {
+  box-sizing: border-box;
+  font-family: 'Special Elite', cursive;
+}
+
+body {
+  background: url(../image/cat.jpg);
+  background-size: 100% 150%;
+  background-repeat: no-repeat;
+}
+
+.gato {
+  margin-top: 50px;
+}
+
+.tablero {
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.15);
+  width: 400px;
+  margin: 0 auto;
+  font-size: 40px;
+  text-align: center;
+  line-height: 133.33333px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.filaTablero {
+  display: flex;
+}
+.filaTablero:last-child .cuadroFila {
+  border-bottom: 0;
+}
+
+.cuadroFila {
+  flex: 1;
+  height: 133.33333px;
+  cursor: pointer;
+  transition: all 0.15s;
+  background: rgba(162, 32, 115, 0.68);
+  border-width: 0 1px 1px 0;
+  border-style: solid;
+  border-color: #bbbbbb;
+}
+.cuadroFila.selected-space, .cuadroFila.selected-space:hover { /* dar click en casilla */
+  background-color: #50C5BB;
+  color: white;
+  border-color: #295D62;
+}
+
+.cuadroFila:hover {
+  background: #D3337B;
+}
+
+.mensaje {
+    width: 401px;
+    height: 9em;
+    position: absolute;
+    background-image: url(../image/backcat.gif);
+    background-size: 100% 80%;
+    color: white;
+    padding: 70px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: all 0.05s;
+    cursor: pointer;
+    border-radius: 3px;
+    transform: scale(1);
+    font-size: 2em;
+    margin-top: 3.5em;
+    margin-left: 17.2em;
+}
+.mensaje:hover {
+  background-image: url(../image/backhover.jpg);
+  background-size: 100%;
+  color: #DD1D80;
+}
+.mensaje a { /*al seleccionar la casilla con x u o*/
+  color: #7DBFCF !important;
+}
+
+.mensaje:empty { /* para ocultar resultado de juego*/
+  height: 0;
+  padding: 0;
+  border: 0;
+  transform: scale(0);
+}
